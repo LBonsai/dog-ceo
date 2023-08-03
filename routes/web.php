@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Web Pages Routes
+ */
+Route::view('/', 'dog');
+Route::view('/dog/list', 'dog');

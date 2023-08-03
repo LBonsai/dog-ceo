@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
+     * up
      * Run the migrations.
      * @return void
      */
@@ -14,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('dog', function (Blueprint $oTable) {
             $oTable->bigIncrements('id');
-            $oTable->string('name')->unique();
+            $oTable->string('name', 50)->unique();
             $oTable->text('url');
             $oTable->timestamps();
         });
     }
 
     /**
+     * down
      * Reverse the migrations.
      * @return void
      */
